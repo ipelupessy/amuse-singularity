@@ -1,8 +1,9 @@
-BootStrap: localimage
-From: /home/inti/zandbak/singularity/test/test.simg
+BootStrap: zypper
+MirrorURL: http://download.opensuse.org/distribution/11.4/repo/oss/
+Include: zypper
 
 %runscript
-    echo "This is what happens when you run the container..."
+    python "$@"
 
 %post
     zypper ar https://download.opensuse.org/repositories/home:/pelupes:/branches:/devel:/gcc:/gcc/openSUSE_11.4/ gcc
