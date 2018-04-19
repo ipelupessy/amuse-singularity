@@ -10,3 +10,4 @@ From: opensuse:42.3
     zypper --gpg-auto-import-keys refresh amuse
     echo "install amuse..."
     zypper -n install amuse
+    sed -i 's/from .backend_nbagg import TimerTornado/from timertornado import TimerTornado/' /usr/lib64/python2.7/site-packages/matplotlib/backends/backend_webagg.py
